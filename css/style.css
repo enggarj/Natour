@@ -8,7 +8,7 @@ Dark green: #28b485
 */
 
 * {
-    margin: 0;
+    margin: 0; 
     padding: 0;
     box-sizing: border-box;
 }
@@ -20,4 +20,14 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 30px;
+}
+
+.header {
+    height: 90vh;  /* set the view port to 90% */
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.782), rgba(40, 180, 133, 0.809)), 
+    url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 }

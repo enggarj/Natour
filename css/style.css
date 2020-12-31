@@ -48,19 +48,19 @@ body {
 
 /* Header logo */
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
 /* Header text-box element*/
 
-.text-box { /* centering text-box element*/
+.header__text-box { /* centering text-box element*/
     position: absolute;
     top: 40%;
     left: 50%;
@@ -78,7 +78,7 @@ body {
     backface-visibility: hidden; /* fix the shakking in animation */
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -92,7 +92,7 @@ body {
     animation-iteration-count: 3; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -162,7 +162,7 @@ body {
     font-size: 1.6rem;
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -191,7 +191,7 @@ body {
     transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -200,7 +200,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out 1s;
     animation-fill-mode: backwards; /* make btn invisible before animation actually start */
 }

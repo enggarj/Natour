@@ -7,14 +7,17 @@ Dark green: #28b485
 
 */
 
-* {
+* ,
+::after,
+::before {
     margin: 0; 
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%; /* 62.5% of 16 is 10, we want easy to converting sizes, and hv no effect with people that do custom set the font size for their browser */
+    font-size: 62.5%; /* 62.5% of 16px is 10px, we want easy to converting sizes, and hv no effect with people that do custom set 
+                                 the font size for their browser */
 }
 
 body {
@@ -24,6 +27,8 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 /* Header Section*/

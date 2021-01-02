@@ -1,11 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 *,
 ::after,
 ::before {
@@ -17,7 +9,6 @@ Dark green: #28b485
 
 html {
   font-size: 62.5%;
-  /* 62.5% of 16px is 10px, we want easy to converting sizes, and hv no effect with people that do custom set the font size for their browser */
 }
 
 body {
@@ -35,17 +26,17 @@ body {
 /* Header background */
 .header {
   height: 90vh;
-  /* set the view port to 90% */
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.782)), to(rgba(40, 180, 133, 0.809))), url(../img/hero.jpg);
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.782), rgba(40, 180, 133, 0.809)), url(../img/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-position: top;
   background-size: cover;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  /* Header logo */
+  /* Header text-box element*/
 }
 
-/* Header logo */
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -56,9 +47,7 @@ body {
   height: 3.5rem;
 }
 
-/* Header text-box element*/
 .header__text-box {
-  /* centering text-box element*/
   position: absolute;
   top: 40%;
   left: 50%;
@@ -74,7 +63,6 @@ body {
   margin-bottom: 6rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  /* fix the shakking in animation */
 }
 
 .heading-primary--main {
@@ -88,8 +76,6 @@ body {
           animation-duration: 2s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  /* animation-delay: 3s;
-    animation-iteration-count: 3; */
 }
 
 .heading-primary--sub {
@@ -99,7 +85,6 @@ body {
   letter-spacing: 1.7rem;
   -webkit-animation: moveInRight 2s ease-out;
           animation: moveInRight 2s ease-out;
-  /* shorthand animation */
 }
 
 /* animation for .heading-primary--main */
@@ -197,8 +182,11 @@ body {
 }
 
 /* Header button */
-.btn:link,
-.btn:visited {
+.btn {
+  /* Header button animation */
+}
+
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -215,11 +203,21 @@ body {
   color: #777;
 }
 
+.btn--white::after {
+  background-color: #fff;
+}
+
 .btn:hover {
   -webkit-transform: translateY(-0.3rem);
           transform: translateY(-0.3rem);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 .btn:active {
@@ -229,7 +227,6 @@ body {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-/* Header button animation */
 .btn::after {
   content: "";
   display: inline-block;
@@ -244,21 +241,10 @@ body {
   transition: all .4s;
 }
 
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-          transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   -webkit-animation: moveInBottom .5s ease-out 1s;
           animation: moveInBottom .5s ease-out 1s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-  /* make btn invisible before animation actually start */
 }
 /*# sourceMappingURL=style.css.map */

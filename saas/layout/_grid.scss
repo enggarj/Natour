@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    color:$color-white;
     margin: 0 auto;
 
     &:not(:last-child) {
@@ -10,9 +9,6 @@
     @include clearfix;
 
     [class^="col-"] { // select all elements that has class name that start "col-". and use * that mean contain. $ that mean end.
-        background-color: $color-primary;
-        height: 5rem;
-        text-align: center;
         float: left;
 
         &:not(:last-child) {

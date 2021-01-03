@@ -12,12 +12,6 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -116,19 +110,6 @@ body {
   }
 }
 
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
@@ -136,42 +117,6 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* Header Section*/
-/* Header background */
-.header {
-  height: 90vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-position: top;
-  background-size: cover;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-  /* Header logo */
-  /* Header text-box element*/
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 /* Header heading */
@@ -205,54 +150,28 @@ body {
           animation: moveInRight 2s ease-out;
 }
 
-/* animation for .heading-primary--main */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
-  }
-  80% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-/* animation for .heading-primary--sub */
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(10rem);
-            transform: translateX(10rem);
-  }
-  80% {
-    -webkit-transform: translateX(-1rem);
-            transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(5deg) scale(1.1);
+          transform: skewY(2deg) skewX(5deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
-/* animation for .btn-animated */
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(5rem);
-            transform: translateY(5rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+.u-center-text {
+  text-align: center;
 }
 
 /* Header button */
@@ -320,5 +239,45 @@ body {
           animation: moveInBottom 0.5s ease-out 1s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+/* Header Section*/
+/* Header background */
+.header {
+  height: 90vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  /* Header logo */
+  /* Header text-box element*/
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }
 /*# sourceMappingURL=style.css.map */

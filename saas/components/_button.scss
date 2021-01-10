@@ -1,6 +1,7 @@
 /* Header button */
 
 .btn {
+	&,
 	&:link,
 	&:visited {
 		text-transform: uppercase;
@@ -11,6 +12,11 @@
 		transition: all 0.3s;
 		position: relative;
 		font-size: $default-font-size;
+
+		// change for the <button> element
+		border: none;
+		cursor: pointer;
+
 	}
 
 	&--white {
@@ -40,7 +46,9 @@
 			opacity: 0;
 		}
 	}
-	&:active {
+	&:active,
+	&:focus {
+		outline: none;
 		transform: translateY(-.1rem);
 		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 	}

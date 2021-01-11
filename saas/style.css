@@ -626,11 +626,20 @@ body {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   height: 52rem;
+  margin: 0 auto;
 }
 
 @media (max-width: 56.25em) {
   .card {
     height: 62rem;
+    width: 40em;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .card {
+    height: 52rem;
+    width: 30em;
   }
 }
 
@@ -653,6 +662,14 @@ body {
 @media (max-width: 56.25em) {
   .card__side {
     height: 62rem;
+    width: 40em;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .card__side {
+    height: 52rem;
+    width: 30em;
   }
 }
 
@@ -766,7 +783,13 @@ body {
 
 @media (max-width: 56.25em) {
   .card__detail ul li {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .card__detail ul li {
+    padding: 1rem;
   }
 }
 
@@ -1315,6 +1338,7 @@ body {
 
 .navigation__nav {
   height: 100vh;
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1349,8 +1373,15 @@ body {
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 230%;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media (max-width: 37.5em) {
+  .navigation__link:link, .navigation__link:visited {
+    padding: .5rem 1rem;
+    background-size: 250%;
+  }
 }
 
 .navigation__link:link span, .navigation__link:visited span {
@@ -1371,6 +1402,7 @@ body {
 }
 
 .navigation__checkbox:checked ~ .navigation__nav {
+  display: block;
   opacity: 1;
   width: 100%;
 }

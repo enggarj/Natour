@@ -20,6 +20,10 @@
                 border-radius: 3px;
                 display: table;
 
+                @include respond (phone) {
+                        width: 90%;
+                }
+
                 opacity: 0;
                 transform: translate(-50%, -50%) scale(.25);
                 transition: all .4s .2s;
@@ -35,6 +39,11 @@
                 display: table-cell;
                 vertical-align: middle;
                 padding: 3rem 4rem;
+
+                @include respond (phone) {
+                        vertical-align: top;
+                        padding: 1rem 2rem;
+                }
         }
 
         &__img {
@@ -58,6 +67,12 @@
                 -ms-hyphens: auto;
                 -webkit-hyphens: auto;
                 hyphens: auto;
+
+                @include respond (phone) {
+                        column-count: 1;
+                        font-size: 1.4rem;
+                        margin-bottom: 2rem;
+                }
         }
 
         &:target {

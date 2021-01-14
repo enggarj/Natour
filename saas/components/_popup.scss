@@ -97,6 +97,11 @@
                         display: inline-block;
                         line-height: 1;
 
+                        @media (max-width: 360px) {
+                                top: 0rem;
+                                right: .5rem;
+                        }
+
                         &:hover {
                                 color: $color-primary;
                         }

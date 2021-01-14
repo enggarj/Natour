@@ -17,8 +17,8 @@
                 }
 
                 &--p1 {
-                        left: 0;
-                        top: -2rem;
+                        left: .5rem;
+                        top: -1.5rem;
 
                         @include respond (tab-port) {
                                 transform: scale(.9);
@@ -26,7 +26,7 @@
                 }
 
                 &--p2 {
-                        right: 0;
+                        right: .5rem;
                         top: 2rem;
 
                         @include respond (tab-port) {
@@ -40,7 +40,6 @@
 
                         @include respond (tab-port) {
                                 transform: scale(.9);
-                                top: 7rem;
                         }
                 }
 
@@ -51,7 +50,7 @@
                         outline: 1.6rem solid $color-primary;
 
                         @include respond (tab-port) {
-                                transform: scale(1.03) translateY(-.5rem);
+                                transform: scale(1.06) translateY(-.5rem);
                                 outline: 1.3rem solid $color-primary;
                                 box-shadow: 0 1.5rem 3rem rgba($color-black, .4);
                         }

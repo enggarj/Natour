@@ -52,8 +52,14 @@
 }
 
 .section-stories {
+	background-image:  linear-gradient(rgba($color-grey-light-1, 0.85)), (url(./../img/nat-2-large.jpg));
+	background-size: cover;
 	padding: 15rem 0;
 	position: relative;
+
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+		background-image:  linear-gradient(rgba($color-grey-light-1, 0.85)), (url(./../img/nat-2.jpg));
+	}
 
 	@include respond (tab-port) {
 		padding: 10rem 0;

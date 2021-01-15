@@ -32,19 +32,19 @@ html {
   font-size: 62.5%;
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
 }
 
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -56,10 +56,20 @@ body {
   padding: 3rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   body {
     padding: 0;
   }
+}
+
+::-moz-selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
 }
 
 /* animation for .heading-primary--main */
@@ -193,7 +203,7 @@ body {
           animation-timing-function: ease-out;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-primary--main {
     letter-spacing: 1rem;
     font-size: 5rem;
@@ -209,7 +219,7 @@ body {
           animation: moveInRight 2s ease-out;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-primary--sub {
     letter-spacing: .5rem;
   }
@@ -230,13 +240,13 @@ body {
   transition: all 0.5s ease;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .heading-secondary {
     font-size: 3rem;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-secondary {
     font-size: 2.5rem;
   }
@@ -248,7 +258,7 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-secondary:hover {
     -webkit-transform: skewY(0) skewX(0) scale(1);
             transform: skewY(0) skewX(0) scale(1);
@@ -281,7 +291,7 @@ body {
   margin-bottom: 4rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-bottom-med {
     margin-bottom: 3rem !important;
   }
@@ -291,7 +301,7 @@ body {
   margin-bottom: 8rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-bottom-big {
     margin-bottom: 5rem !important;
   }
@@ -428,7 +438,7 @@ body {
   transition: all .4s;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .form__input {
     width: 100%;
   }
@@ -471,7 +481,7 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .form__radio-group {
     width: 100%;
     margin-bottom: 2rem;
@@ -555,7 +565,7 @@ body {
   outline-offset: 2rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .composition__photo {
     -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
@@ -566,37 +576,25 @@ body {
 .composition__photo--p1 {
   left: .5rem;
   top: -1.5rem;
-}
-
-@media (max-width: 56.25em) {
-  .composition__photo--p1 {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
+  /*                         @include respond (tab-port) {
+                                transform: scale(.9);
+                        } */
 }
 
 .composition__photo--p2 {
   right: .5rem;
   top: 2rem;
-}
-
-@media (max-width: 56.25em) {
-  .composition__photo--p2 {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
+  /*                         @include respond (tab-port) {
+                                transform: scale(.9);
+                        } */
 }
 
 .composition__photo--p3 {
   left: 20%;
   top: 10rem;
-}
-
-@media (max-width: 56.25em) {
-  .composition__photo--p3 {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
+  /*                         @include respond (tab-port) {
+                                transform: scale(.9);
+                        } */
 }
 
 .composition__photo:hover {
@@ -608,19 +606,19 @@ body {
   outline: 1.6rem solid #55c57a;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .composition__photo:hover {
     -webkit-transform: scale(1.06) translateY(-0.5rem);
             transform: scale(1.06) translateY(-0.5rem);
-    outline: 1.3rem solid #55c57a;
+    outline: 1.4rem solid #55c57a;
     -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
             box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
   }
 }
 
 .composition:hover .composition__photo:not(:hover) {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .card {
@@ -631,14 +629,14 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .card {
     height: 62rem;
     width: 40em;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .card {
     height: 52rem;
     width: 30em;
@@ -661,14 +659,14 @@ body {
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .card__side {
     height: 62rem;
     width: 40em;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .card__side {
     height: 52rem;
     width: 30em;
@@ -783,13 +781,13 @@ body {
   padding: 1rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .card__detail ul li {
     padding: 1.5rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .card__detail ul li {
     padding: 1rem;
   }
@@ -837,13 +835,13 @@ body {
   transition: all ease-in-out .3s;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .feature-box {
     height: 30rem;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .feature-box {
     margin: 0 auto;
     padding: 2rem;
@@ -862,7 +860,7 @@ body {
   color: transparent;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .feature-box__icon {
     margin-bottom: 0;
   }
@@ -873,7 +871,7 @@ body {
           transform: translateY(-1.5rem) scale(1.1);
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .feature-box:hover {
     -webkit-transform: translateY(-1rem) scale(1.05);
             transform: translateY(-1rem) scale(1.05);
@@ -893,14 +891,14 @@ body {
           transform: skewX(-12deg);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .story {
     width: 100%;
     padding: 5rem 5rem 5rem 8rem;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .story {
     -webkit-transform: skewX(0);
             transform: skewX(0);
@@ -919,7 +917,7 @@ body {
   position: relative;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .story__shape {
     -webkit-transform: skewX(0) translateX(-3rem);
             transform: skewX(0) translateX(-3rem);
@@ -941,7 +939,7 @@ body {
           transform: skewX(12deg);
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .story__text {
     -webkit-transform: skewX(0);
             transform: skewX(0);
@@ -984,10 +982,14 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 200;
   -webkit-transition: all .3s;
   transition: all .3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   opacity: 0;
   visibility: hidden;
 }
@@ -1012,7 +1014,7 @@ body {
   transition: all .4s .2s;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .popup__content {
     width: 90%;
   }
@@ -1030,7 +1032,7 @@ body {
   padding: 3rem 4rem;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .popup__right {
     vertical-align: top;
     padding: 1rem 2rem;
@@ -1059,7 +1061,7 @@ body {
   hyphens: auto;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .popup__text {
     -webkit-column-count: 1;
             column-count: 1;
@@ -1105,22 +1107,25 @@ body {
 /* Header background */
 .header {
   height: 90vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero-small.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-position: top;
   background-size: cover;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-  /* 	@include respond (phone) {
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-		clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-	} */
   /* Header logo */
   /* Header text-box element*/
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+  .header {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
   .header {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -1151,7 +1156,7 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row {
     max-width: 55rem;
     padding: 0 3rem;
@@ -1162,7 +1167,7 @@ body {
   margin-bottom: 8rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row:not(:last-child) {
     margin-bottom: 6rem;
   }
@@ -1182,14 +1187,14 @@ body {
   margin-right: 6rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row [class^="col-"]:not(:last-child) {
     margin-right: 0;
     margin-bottom: 6rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row [class^="col-"] {
     width: 100% !important;
   }
@@ -1226,7 +1231,7 @@ body {
   color: #f7f7f7;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer {
     padding: 8rem 0;
   }
@@ -1237,7 +1242,7 @@ body {
   margin-bottom: 8rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__logo-box {
     margin-bottom: 6rem;
   }
@@ -1302,14 +1307,14 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .navigation__button {
     top: 4rem;
     right: 4rem;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .navigation__button {
     top: 3rem;
     right: 3rem;
@@ -1331,14 +1336,14 @@ body {
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .navigation__background {
     top: 4.5rem;
     right: 4.5rem;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .navigation__background {
     top: 3.5rem;
     right: 3.5rem;
@@ -1386,7 +1391,7 @@ body {
   transition: all .5s;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .navigation__link:link, .navigation__link:visited {
     padding: .5rem 1rem;
     background-size: 250%;
@@ -1474,7 +1479,7 @@ body {
   margin-top: -20vh;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-about {
     padding: 20rem 0 35rem 0;
   }
@@ -1490,14 +1495,14 @@ body {
   margin-top: -10rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-features {
     padding: 10rem 0;
     margin-top: -4rem;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .section-features {
     -webkit-transform: skewY(-8deg);
             transform: skewY(-8deg);
@@ -1509,7 +1514,7 @@ body {
           transform: skewY(5deg);
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .section-features > * {
     -webkit-transform: skewY(8deg);
             transform: skewY(8deg);
@@ -1522,13 +1527,13 @@ body {
   margin-top: -6rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-tours {
     padding: 20rem 0 10rem 0;
   }
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .section-tours {
     padding: 15rem 0;
     padding-bottom: 10rem;
@@ -1540,7 +1545,7 @@ body {
   position: relative;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-stories {
     padding: 10rem 0;
   }
@@ -1552,7 +1557,7 @@ body {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-book {
     padding: 10rem 0;
   }
@@ -1566,13 +1571,13 @@ body {
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .book {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(./../img/nat-10.jpg);
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .book {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.9))), url(./../img/nat-10.jpg);
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%), url(./../img/nat-10.jpg);
@@ -1584,13 +1589,13 @@ body {
   padding: 6rem;
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .book__form {
     width: 65%;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .book__form {
     width: 100%;
   }

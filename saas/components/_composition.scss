@@ -20,27 +20,27 @@
                         left: .5rem;
                         top: -1.5rem;
 
-                        @include respond (tab-port) {
+/*                         @include respond (tab-port) {
                                 transform: scale(.9);
-                        }
+                        } */
                 }
 
                 &--p2 {
                         right: .5rem;
                         top: 2rem;
 
-                        @include respond (tab-port) {
+/*                         @include respond (tab-port) {
                                 transform: scale(.9);
-                        }
+                        } */
                 }
 
                 &--p3 {
                         left: 20%;
                         top: 10rem;
 
-                        @include respond (tab-port) {
+/*                         @include respond (tab-port) {
                                 transform: scale(.9);
-                        }
+                        } */
                 }
 
                 &:hover {
@@ -51,13 +51,13 @@
 
                         @include respond (tab-port) {
                                 transform: scale(1.06) translateY(-.5rem);
-                                outline: 1.3rem solid $color-primary;
+                                outline: 1.4rem solid $color-primary;
                                 box-shadow: 0 1.5rem 3rem rgba($color-black, .4);
                         }
                 }
         }
 
         &:hover &__photo:not(:hover) {
-                transform: scale(.8);
+                transform: scale(.9);
         }
 }
